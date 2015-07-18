@@ -1,0 +1,19 @@
+<ion-view title="Sign Up">
+    <ion-content has-header="true" has-tabs="true" padding="true"  class="intropage">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input ng-model="user.email" type="email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label" >Password</span>
+                <input ng-model="user.password" type="password">
+            </label>
+        </div>
+        <div class="assertive" ng-show="error.message">{{error.message}}</div>
+        <button class="button button-block button-assertive button-outline" style="height:25%; width:80%; margin-right:auto; margin-left:auto; text-align:center; border:1px solid white; color:white;" ng-click="register()">
+            CREATE ACCOUNT
+        </button>
+        <p style="padding-top:65%; text-align:center; color:white;">By creating an account you agree to the Terms of Use and Privacy Policy.</p>
+    </ion-content>
+</ion-view>

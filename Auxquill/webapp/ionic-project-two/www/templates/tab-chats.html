@@ -1,0 +1,82 @@
+<ion-view view-title="Home" ng-init="callFunction()">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+        </ion-refresher>
+        <div class="row">
+            <div class="col col-50">
+                <div style="width:100%; padding:0; margin:0;">
+                    <button class="button button-large button-energized button-outline button-calm ion-plus-round" style="width:100%; padding:0; margin:0;" ng-click="takePic()" onclick="document.getElementById('fileID').click(); return false;">
+                        Take Photo
+                    </button>
+                    <input type="file" id="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                </div>
+            </div>
+            <div class="col col-35">
+                <div style="width:100%; padding:0; margin:0;">
+                    <button class="button button-large button-balanced button-outline ion-checkmark-round" style="width:100%; padding:0; margin:0;" ng-click="share()">
+                        Save
+                    </button>
+                </div>
+            </div>
+<!--
+            <div class="col col-15">
+                <div style="width:100%; padding:0; margin:0;">
+                    <button class="button button-large button-balanced button-outline ion-checkmark-round" style="width:100%; padding:0; margin:0;" ng-click="testgo()">
+                        Tsfadsa
+                    </button>
+                </div>
+            </div>
+-->
+        </div>
+        <ion-list>
+            <div class="main">
+                <div class="container">
+
+                    <ion-item ng-repeat="photo in photos" type="item-text-wrap" style="padding:2%; width:100%;">
+                        <div class="row">
+                            <blockquote style="color: #696969;">
+                                <a href="#/tab/chats/{{$index}}" style="text-decoration:none;">
+                                    <div class="col col-90">
+                                        <h3 style="font-size:17px; color:#CC5200;"><b>Title:</b> {{ photo.summary }}</b></h3>
+                                        <p style="color:#B0B0B0; font-size:15px; color:#FFC299  ;">{{ photo.time | date }}</p>
+                                        <p style="font-size:15px; color:#E68A2E;">{{ photo.text }}</p>
+                                    </div>
+                                </a>
+                            </blockquote>
+                            <div class="col">
+                                <label class="checkbox checkbox-balanced">
+
+                                    <input type="checkbox" style="padding-left:0px; width:30px;" ng-model="checkedArr[$index]" ng-change="checkShared($index)"/>
+                                </label>
+                            </div>
+                        </div>
+                        <ion-option-button class="button-assertive" ng-click="remove($index)">
+                            Delete
+                        </ion-option-button>
+                    </ion-item>
+                </div>
+
+                <!--
+          <ion-item class="item-remove-animate item-icon-right" ng-repeat="photo in photos" type="item-text-wrap" href="#/tab/chats/{{$index}}">
+            <div class="row row-top">
+            <div class="col"><img class="img-responsive" height = "10%" width = "50%" ng-src="{{ photo.imageurl }}"></div>
+             <!   <button class="button button-small" ng-click="shareDialog($index)">Share Summary</button>
+             <div class="col">
+            <div class="row responsive-sm">
+            <i class="icon ion-chevron-right icon-accessory"></i>
+            <div class="col"><p class="summary smallp" style="margin:0px; padding=0px;">{{ photo.summary }}</p></div>
+            <div class="col"><p class="date smallp" >{{ photo.pubdate | date }}</p></div>
+            <div class="col"><p class="notes smallp">{{ photo.notes }}</p></div>
+            </div>
+          </div>
+        </div>
+            -->
+
+                <!--         </ion-item>-->
+
+            </div>
+            </div>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

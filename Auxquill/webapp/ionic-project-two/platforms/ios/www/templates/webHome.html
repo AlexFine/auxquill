@@ -1,0 +1,71 @@
+<!--<ion-view left-buttons="leftButtons" right-buttons="rightButtons">
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide ng-repeat="slide in slides">
+            <h3>{{ slide.title }}</h3>
+            <p>{{ slide.text }}</p>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>-->
+<!-- where the initial view template will be rendered -->
+<ion-nav-view>
+    <ion-view ng-init="checkLogged()" class="webHome" hide-nav-bar="true" style="background-image:url('http://quillapp.io/MIT.png')">
+
+        <center>
+            <div>
+                <div class="button-bar quillcolor" style="width:100%; padding-left:50%;">
+                    <a class="button" style="background-color:transparent; border:0px solid white; color:white; font-size:20px;" ng-click="webHome()" transition="none"><b>Home</b></a>
+                    <a class="button" style="background-color:transparent; border:0px solid white; color:white; font-size:20px;" ng-click="Capture()" transition="none"><b>Capture</b></a>
+                    <a class="button" style="background-color:transparent; border:0px solid white; color:white; font-size:20px;" ng-click="Analyze()" transition="none"><b>Analyze</b></a>
+                    <a class="button" style="background-color:transparent; border:0px solid white; color:white; font-size:20px;" ng-click="Account()" transition="none"><b>Account</b></a>
+                    <a class="button" style="background-color:transparent; border:0px solid white; color:white; font-size:20px;" ng-click="#" transition="none"><b>About</b></a>
+                </div>
+                <h1 style="font-family: 'Raleway'; font-size:55px; padding-top:5%; color:#FF6600" class="quillcolor"><b>Quill</b></h1>
+                <p style="font-size:20px; color:white;"><b>An app that takes notes for you.</b>
+                </p>
+
+
+                <div style="width:60%;">
+                    <div class="input-wrapper">
+                        <input required type="text" ng-model="user.username" placeholder="Email" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                    </div>
+                    <div class="input-wrapper">
+                        <input required type="password" ng-model="user.password" placeholder="Password" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" ng-model="user.ref" placeholder="Referal Code" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                    </div>
+
+
+                    <button class="button button-block button-full button-assertive" style="border:1px solid white; height:10%; width:80%; margin-right:auto; margin-left:auto; text-align:center; color:white;" ng-click="register()">
+                        CREATE ACCOUNT
+                    </button>
+
+                    <p style="font-size:18px; color:white;">Already have an account?
+                        <a style="height:10%; width:80%; margin-right:auto; margin-left:auto; text-align:center; font-family: 'Raleway'; color:#33CCFF;" ng-click="login()">
+                            <b>Login!</b>
+                        </a>
+                    </p>
+                </div>
+                <div class="row" style="width:60%; color:white;">
+                    <div class="col">
+                        <img src="http://quillapp.io/introcamera.png" style="width:25%; height:25%;">
+                        <h1 style="color:white;">Capture</h1>
+                        <p>Upload all the content you want analyzed.</p>
+                    </div>
+                    <div class="col">
+                        <img src="http://quillapp.io/intronote.png" style="width:25%; height:25%;">
+                        <h1 style="color:white;">Analyze</h1>
+                        <p>Our algorithms will analyze the information you uploaded and provide you with the most important information.</p>
+                    </div>
+                    <div class="col">
+                        <img src="https://s-media-cache-ak0.pinimg.com/originals/b7/c0/2b/b7c02b413a641483ee0f43ea0a695dc1.png" style="width:25%; height:25%;">
+                        <h1 style="color:white;">Save</h1>
+                        <p>Save all your notes to a source of your choice</p>
+                    </div>
+
+                </div>
+            </div>
+        </center>
+        </ion-slide-box>
+    </ion-view>
+</ion-nav-view>

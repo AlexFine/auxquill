@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EE8E66E1-B450-4633-8DA9-7E77970DDD2C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Quill</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4BF7C25393E04C2A7C3DFB1005B7FE249691FFBC</key>
+		<string>https://github.com/mash99/Quill.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ionic-project-one/platforms/ios/Quill.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4BF7C25393E04C2A7C3DFB1005B7FE249691FFBC</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mash99/Quill.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4BF7C25393E04C2A7C3DFB1005B7FE249691FFBC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4BF7C25393E04C2A7C3DFB1005B7FE249691FFBC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Quill</string>
+		</dict>
+	</array>
+</dict>
+</plist>

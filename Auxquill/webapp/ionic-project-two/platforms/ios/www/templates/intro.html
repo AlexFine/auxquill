@@ -1,0 +1,93 @@
+<!--<ion-view left-buttons="leftButtons" right-buttons="rightButtons">
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide ng-repeat="slide in slides">
+            <h3>{{ slide.title }}</h3>
+            <p>{{ slide.text }}</p>
+        </ion-slide>
+    </ion-slide-box>
+</ion-view>-->
+
+<ion-view ng-init="checkLogged()">
+    <ion-nav-buttons side="left">
+        <button class="button button-dark button-clear no-animation" ng-click="login()" ng-show="!slideIndex">
+            Login
+        </button>
+        <button class="button button-dark button-clear no-animation" ng-click="login()" ng-show="slideIndex > 0">
+            Login
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-dark button-clear no-animation" ng-click="slideNext()" ng-show="slideIndex != 1">
+            Sign Up
+        </button>
+        <button class="button button-dark button-clear no-animation" ng-click="slideNext()" ng-show="slideIndex == 1">
+            Sign Up
+        </button>
+    </ion-nav-buttons>
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide>
+            <div style="padding-top:25%;">
+                <img src="http://quillapp.io/introicon.png" style="width:50%; height:50%; padding-left:10%;">
+                <h3 style="color:white; font-family: 'Raleway';"><b>Quill</b></h3>
+                <p>A simple app to take notes for you.</p>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div style="padding-top:35%;">
+                <img src="http://quillapp.io/introcamera.png" style="width:30%; height:30%;">
+                <h3 style="color:white; font-family: 'Raleway';">Take Photos</h3>
+                <p>Take a picture of a textbook page.</p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <div style="padding-top:40%;">
+                <img src="http://quillapp.io/intronote.png" style="width:25%; height:25%;">
+                <h3 style="color:white; font-family: 'Raleway';">Notes</h3>
+                <p>We take and save notes
+                    <br>on the textbook pages.</p>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div style="padding-top:35%;">
+                <!-- <div class="list">
+           <label class="item item-input">
+                <input type="text" ng-model="user.username" placeholder="Email">
+            </label>
+            <label class="item item-input">
+                <input type="password" ng-model="user.password" placeholder="Password">
+            </label>-->
+                <div class="input-wrapper">
+                    <input required type="text" ng-model="user.username" placeholder="Email" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                </div>
+                <div class="input-wrapper">
+                    <input required type="password" ng-model="user.password" placeholder="Password" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" ng-model="user.ref" placeholder="Referal Code" style="color:white; font-size:17px; padding-left:10%;" class="introsignup">
+                </div>
+
+
+                <!--</div>-->
+                <div class="assertive" ng-show="error.message">{{error.message}}</div>
+                <button class="button button-block button-outline button-assertive" style="border:1px solid white; height:10%; width:80%; margin-right:auto; margin-left:auto; text-align:center; color:white;" ng-click="register()">
+                    CREATE ACCOUNT
+                </button>
+
+                <p style="font-size:18px;">Already have an account?
+                    <a style="height:10%; width:80%; margin-right:auto; margin-left:auto; text-align:center; font-family: 'Raleway'; color:#33CCFF;" ng-click="login()">
+                        <b>Login!</b> 
+                    </a>
+                </p>
+                <p style="font-size:8px; padding-top:40%;">By creating an account you agree to the Terms of Use and Privacy Policy.</p>
+                
+                <div style="padding-top:30%;">
+                </div>
+            </div>
+            </div>
+        </ion-slide>
+        </div>
+        </ion-slide>
+
+    </ion-slide-box>
+</ion-view>

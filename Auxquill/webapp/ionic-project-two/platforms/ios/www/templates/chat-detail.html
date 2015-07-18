@@ -1,0 +1,144 @@
+<ion-nav-bar class='bar-positive'>
+    <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+<ion-view view-title="Photo Facts" ng-init="callFunc()">
+    <ion-content on-swipe-right="swipe('right')" style="background-color:#F0F0F0">
+        <center>
+            <div class="card" style="opacity:.9; border-radius:10px;">
+                <div class="item item-text-wrap">
+                    <h1 style="font-family: 'Raleway', 'Hind', sans-serif; color:#FF9900 ; text-align:left; margin:0px; padding:0px; font-size:18px;"><b>Summary</b></h1>
+                    <hr>
+                    <p class="smallp" style="font-size:1.1em; color:#FF9900 ; text-align:left; font-size:19px; line-height: 130%;">{{ photos[myIndex].summary }}</p>
+                </div>
+            </div>
+
+            <div class="card" style="opacity:.9; border-radius:10px;">
+                <div class="item item-text-wrap" style="opacity:.9;">
+                    <h1 style="font-family: 'Raleway', 'Hind', sans-serif; color:#CC3300 ; text-align:left; font-size:18px;"><b>Notes</b></h1>
+                    <hr>
+                    <div id="list" ng-repeat="note in notes">
+                        <ul class="my-nav">
+                            <li style="font-family: 'Raleway', 'Hind', sans-serif; font-size:0.9em; text-align:left; color:#CC3300 ; font-size:17px;"><a  ng-click="modal2.show()"><b>{{ note.text }}</b></a>
+                            </li>
+                        </ul>
+                        <div id="list" ng-repeat="sentence in note.sentences track by $index">
+                            <div ng-if="sentence">
+                                <ul class="my-nav" style=" padding-left:20px;">
+                                    <li style="font-family: 'Raleway', 'Hind', sans-serif; font-size:0.9em; text-align:left; color:#CC3300 ; font-size:15px;">
+                                        {{ sentence }}</li>
+                                </ul>
+                            </div>
+                            <div ng-if="!sentence">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--EXTRA RESEARCH SECTION-->
+                <div class="card" style="opacity:.9; border-radius:10px;">
+                <div class="item item-text-wrap" style="opacity:.9;">
+                    <h1 style="font-family: 'Raleway', 'Hind', sans-serif; color:Orange ; text-align:left; font-size:18px;"><b>Further Research</b></h1>
+                    <hr>
+                    <div id="list" ng-repeat="note in notes">
+
+                        <div id="list" ng-repeat="sentence in note.sentences track by $index">
+                            <div ng-if="sentence">
+                                <ul class="my-nav" style=" padding-left:20px;">
+                                    <li style="font-family: 'Raleway', 'Hind', sans-serif; font-size:0.9em; text-align:left; color:orange ; font-size:15px;">
+                                        {{ sentence }}</li>
+                                </ul>
+                            </div>
+                            <div ng-if="!sentence">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--VIDEOS -->
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <h1 style="font-family: 'Raleway', 'Hind', sans-serif; color:#FF3300; text-align:left; font-size:18px;"><b>Videos</b></h1>
+                    <hr>
+                    <iframe width="70%" height="4%" ng-repeat="vid in videos" src="{{ vid | trusted}}" frameborder="0" allowfullscreen style="padding:10px;"></iframe>
+
+                </div>
+            </div>
+            <!--VIEW TEXT BUTTON-->
+            <div class="card" style="opacity:.9; border-radius:10px;">
+                <a ng-click="modal.show()">
+                    <h3 class="title" style="padding-top:15px; color:#FF4719 ">View Text </h3>
+                </a>
+            </div>
+            <!--DATE ICON-->
+               <div class="card" style="opacity:.9; border-radius:10px;">
+                <div class="item item-text-wrap" style="opacity:.9;">
+                    <p class="smallp" style="font-size:1.1em; color:#FF9980;">{{ photos[myIndex].time | date }}</p>
+                </div>
+            </div>
+            <!--MODAL FOR TEXT -->
+            <script id="chat-detail.html" type="text/ng-template">
+                <div class="modal">
+                    <ion-scroll zooming="true" direction="xy" style="width:100%;height:600px">
+                        <div style="padding-top:30px;">
+                            <div class="button button-clear" ng-click="modal.hide()" style="height:5%; width:5%;"><span class="icon ion-close"></span>
+                            </div>
+
+                            <content has-header="true" padding="true">
+                                <p style="color:#FF4719 "> {{ photos[myIndex].text }} </p> </content>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </script>
+            <!--CLASS TAG-->
+            <!--<div class="card" style="opacity:.9; border-radius:10px;">
+                <div class="item item-text-wrap" style="opacity:.9;">
+                    <div id="classes">
+
+                        <body ng-controller="MainCtrl">
+
+                            <tags-input [max-tags="{1}" ] ng-model="tags"></tags-input>
+
+                        </body>
+                    </div>
+                </div>
+            </div>-->
+            <!--MODAL FOR MORE FACTS
+            <script id="chat-detail.html" type="text/ng-template"  ng-repeat="note in notes">
+                <div class="modal2">
+                    <ion-scroll zooming="true" direction="xy" style="width:100%;height:600px">
+                        <div style="padding-top:30px;">
+
+ <ion-header-bar style="position:fixed;">
+      <h1 class="title">Further Research Notes</h1>
+     <div class="button button-clear" ng-click="modal.hide()" style="padding:0px;"><span class="icon ion-close"></span>
+                            </div>
+    </ion-header-bar>
+                            <content has-header="true" padding="true"  style="padding-top:5%;">
+                                <div style="padding-top:3%;">
+                               <div id="list" ng-repeat="note in notes">
+
+                        <div id="list" ng-repeat="sentence in note.sentences track by $index">
+                            <div ng-if="sentence">
+                                <ul class="my-nav" style=" padding-left:20px;">
+                                    <li style="font-family: 'Raleway', 'Hind', sans-serif; font-size:0.9em; text-align:left; color:OrangeRed; font-size:15px;">
+                                        {{ sentence }}</li>
+                                </ul>
+                            </div>
+                            <div ng-if="!sentence">
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                            </content>
+                        </div>
+                    </ion-scroll>
+                </div>
+            </script> -->
+        </center>
+        </p>
+    </ion-content>
+</ion-view>

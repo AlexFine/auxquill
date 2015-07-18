@@ -1,0 +1,24 @@
+<ion-view view-title="Account">
+    <ion-content>
+        <ion-list>
+            <ion-toggle toggle-class="toggle-energized" ng-model="settings.enableEmail">
+                Enable Email
+            </ion-toggle>
+            <ion-toggle toggle-class="toggle-energized" ng-model="settings.enableDrive">
+                Enable Google Drive
+            </ion-toggle>
+            <ion-toggle toggle-class="toggle-energized" ng-model="settings.enableReceiveEmail">
+                Recieve Emails
+            </ion-toggle>
+            <ion-item>
+                Signed in as {{ email }}
+            </ion-item>
+            <ion-item ng-click="logout()">
+                Sign Out
+            </ion-item>
+            <ion-item ng-show="(refer+'').length!=0">
+                Referral Code: {{ refer }}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+<ion-view view-title="Quill" style="background-color:#F37D52 ; ">
+    <ion-content style=" position:fixed;" scroll="false">
+
+        <center>
+            <img src="http://quillapp.io/iphone7.png" style="width:50%; height:10%; padding-top:10%;">
+            <p>Take a Picture of Text
+                <br>We Summarize it</p>
+            <div style="padding-top:16%;">
+                <a href="#/tab/chats">
+                    <div class="bar-footer">
+                        <button class="button footer" ng-click="takePic()" onclick="document.getElementById('fileID').click(); return false;" style="width:100%; background-color:#DC143C; color:white; border: 0px solid #FFCC66;">
+                            <h1 style="color:white;"> Start</h1>
+                        </button>
+                        <input type="file" id="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                    </div>
+                </a>
+            </div>
+        </center>
+    </ion-content>
+</ion-view>

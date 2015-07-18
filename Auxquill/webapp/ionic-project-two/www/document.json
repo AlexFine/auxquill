@@ -1,0 +1,38 @@
+[
+  {
+    "summary": "A stable sort is only used when an object has more data than is used to perform comparisons. So chances are if you need a stable sort, you would've written a custom comparison function. The fact that customization is needed for every type defeats the purpose of a template. So, if you're creating a template (which is inherently compatible with many types), you'll likely be using ",
+    "notes": "My question is: given that the array is initially in a (uniformly) random permutation and that all its elements are distinct, what's the expected number of times the max variable is updated (ignoring the initial assignment).",
+    "imageurl": "http://mamapeggy.com/WordPress/wp-content/uploads/2012/08/red-velvet-cake-note.jpg",
+    "pubdate": 1412208000000
+  },
+  {
+    "summary": "The psychology of dating requires fundamental concepts such as the internal locus of control",
+    "notes": "The conflict between nature and nurture: 1) nature provides the innate personality traits we don't realize like",
+    "imageurl": "http://library.solarbotics.net/apocrypha/pix/HBS_concepts.gif",
+    "pubdate": 1413590400000
+  },
+  {
+    "summary": "Entrepreneurial aspects include a combination of adversity traits and ambitious traits",
+    "notes": "Personality traits are extremely subjective, and can mean a lot of different things. For example",
+    "imageurl": "http://www.thejeffreymacdonaldcase.com/assets/images/browning-notes_1970-08-31_p01.gif",
+    "pubdate": 1415145600000
+  },
+  {
+    "summary": "The history of France can be divided into a number of periods, each contributing to the French culture we see today ",
+    "notes": "1) Renaissance period - during the renaissane period, France existed as one of the better known areas in Europe",
+    "imageurl": "http://www.apfn.org/skolnicksreport/images/ustreas111.gif",
+    "pubdate": 1413590400000
+  },
+  {
+    "summary": "Religion is one of the most powerful entities that exist in the world and subsequently in the human mind",
+    "notes": "Religion as seen in history: history has formed history -- ex: Jesus Christ and the Roman Empire",
+    "imageurl": "http://broderickandbascom.com/family-trees/mccallum/mary-pelland-written-notes-from-jill-1970s/med/comp/mary-pelland-written-notes-from-jill-1970s4b-med.jpg",
+    "pubdate": 1418342400000
+  },
+  {
+    "summary": "Sanjeev Murty - who is he and what has he done for humanity?",
+    "notes": "Earlier accomplisments 1) in 2020, he hacked the NSA providing insight into key security flaws in the system and",
+    "imageurl": "http://www.marqueecapital.com/asset_images/hand-written-notes2.jpg",
+    "pubdate": 1416009600000
+  }
+]
