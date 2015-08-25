@@ -1,0 +1,27 @@
+<ion-view title="Contact">
+
+    <ion-nav-buttons side="right">
+        <a class="button button-clear" href="#/app/edit-contact/{{contact.Id}}">Edit</a>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item">
+                <h2>{{contact.Name}}</h2>
+                <p>{{contact.Title}}</p>
+            </div>
+            <a class="item item-icon-left" href="tel:{{contact.Phone}}">
+                <i class="icon ion-ios-telephone"></i>Call Office<p>{{contact.Phone}}</p>
+            </a>
+            <a class="item item-icon-left" href="tel:{{contact.MobilePhone}}">
+                <i class="icon ion-ios-telephone"></i>Call Mobile<p>{{contact.MobilePhone}}</p>
+            </a>
+            <a class="item item-icon-left" href="sms:{{contact.MobilePhone}}">
+                <i class="icon ion-ios-chatbubble"></i>SMS<p>{{contact.MobilePhone}}</p>
+            </a>
+            <a class="item item-icon-left" href="mailto:{{contact.Email}}">
+                <i class="icon ion-ios-email"></i>Email<p>{{contact.Email}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
